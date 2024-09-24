@@ -1,0 +1,16 @@
+.button-custom {
+  background-color: #697565;
+  padding: 10px 20px;
+  border-radius: 15px;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease;
+  &:hover {
+    opacity: 0.8;
+  }
+  a {
+    color: #ECDFCC;
+    text-decoration: none;
+  }
+
+}

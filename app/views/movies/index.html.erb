@@ -1,0 +1,31 @@
+<div class="containt container my-4">
+  <div class="d-flex justify-content-between">
+    <h1>All movies</h1>
+    <div class="m-3 p-2">
+      <button class="button-custom"><%= link_to "My lists",
+      lists_path(@list) %></button>
+    </div>
+  </div>
+  <div class="movie-grid">
+    <% @movies.each do |movie|%>
+      <div id="link-card"><%= link_to movie_path(movie) do %></div>
+        <div class="movie-card">
+          <div class="align-self-center">
+            <div id="title">
+              <h4 class="align-self-center"><%= movie.title %></h4>
+            </div>
+            <div id="overview">
+              <p class="align-self-center"><%= movie.overview %></p>
+            </div>
+            <div id="rating">
+              <p class="align-self-center"><strong><%= movie.rating %>/10</strong></p>
+            </div>
+            <div class="image-container">
+              <img src="<%= movie.poster_url %>" class="image-size" alt="poster of <%= movie.title %>">
+            </div>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
